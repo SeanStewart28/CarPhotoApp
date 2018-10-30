@@ -1,3 +1,16 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ h1 {
+    font-size: 32px;
+    color: black;
+    //background-color: red;
+    //border-style: outset;
+    border: 5px solid red;
+    background-color: white;
+    text-align: center;
+    
+}
+body {
+    background-color: grey;
+}
