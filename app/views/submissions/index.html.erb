@@ -1,12 +1,11 @@
 <h1>ALL SUBMISSIONS</h1>
- 
 <table>
   <tr>
     <th>Title</th>
     <th>Text</th>
   </tr>
  
-  <% @submissions.each do |article| %>
+  <% @submissions.each do |submission| %>
     <tr>
       <td><%= submission.title %></td>
       <td><%= submission.text %></td>
