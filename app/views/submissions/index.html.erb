@@ -1,0 +1,16 @@
+<h1>ALL SUBMISSIONS</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @submissions.each do |article| %>
+    <tr>
+      <td><%= submission.title %></td>
+      <td><%= submission.text %></td>
+      <td><%= link_to 'Show', submission_path(submission) %></td>
+    </tr>
+  <% end %>
+</table>
