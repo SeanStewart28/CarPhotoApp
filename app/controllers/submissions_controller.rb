@@ -34,6 +34,12 @@ class SubmissionsController < ApplicationController
             render 'edit'
         end
     end
+    
+    def destroy
+        @submission = Submission.find(params[:id])
+        @submission.destroy
+        redirect_to submissions_path
+    end
 end
 
 private 
