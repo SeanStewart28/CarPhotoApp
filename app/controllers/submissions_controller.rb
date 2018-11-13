@@ -21,6 +21,19 @@ class SubmissionsController < ApplicationController
             render 'new'
         end
     end
+    
+    def edit 
+        @submission = Submission.find(params[:id])
+    end
+    
+    def update
+        @submission = Submission.find(params[:id])
+        if @submission.update(submission_params)
+            redirect_to @submission
+        else
+            render 'edit'
+        end
+    end
 end
 
 private 

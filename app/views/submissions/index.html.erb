@@ -1,4 +1,4 @@
-<h1>ALL SUBMISSIONS</h1>
+<h1>THE RANKING</h1>
 <%= link_to 'NEW SUBMISSION', new_submission_path %>
 <table>
   <tr>
@@ -11,6 +11,8 @@
       <td><%= submission.title %></td>
       <td><%= submission.text %></td>
       <td><%= link_to 'Show', submission_path(submission) %></td>
+      <td><%= link_to 'Edit', edit_submission_path(submission) %></td>
     </tr>
   <% end %>
 </table>
+<%= link_to 'Back', controller: 'welcome' %>
