@@ -1,7 +1,7 @@
 class SubmissionsController < ApplicationController
     
     def index 
-        @submissions = Submission.all
+        @submissions = Submission.where(["title LIKE ?","%#{params[:search]}%"])
     end
     
     def show 

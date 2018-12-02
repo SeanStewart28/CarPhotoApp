@@ -46,6 +46,12 @@ tr:nth-child(even) {
 <div class="logo">
     <img src="https://webpages.uncc.edu/ddas4/SoftwareEngFinalProject/output-onlinepngtools.png" align="left" width="400px" height="210px"/><h1 style="font-size:64pt;">RANK MY RIDE: RANKING</h1>
 </div>
+
+<%= form_tag submissions_path, :method => 'get' do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search" %>
+<% end %>
+
 <table>
   <tr>
     <th>Title</th>
