@@ -1,4 +1,6 @@
-<h1>EDIT SUBMISSION</h1>
+<div class="logo">
+    <img src="https://webpages.uncc.edu/ddas4/SoftwareEngFinalProject/output-onlinepngtools.png" align="left" width="400px" height="210px"/><h1 style="font-size:64pt;">RANK MY RIDE: EDIT SUBMISSION</h1>
+</div>
  
 <%= form_for :submission, url: submission_path(@submission), method: :patch do |f| %>
  
@@ -16,7 +18,7 @@
     </div>
   <% end %>
   
-   <p>
+  <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </p>

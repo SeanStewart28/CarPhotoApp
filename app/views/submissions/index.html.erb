@@ -1,15 +1,64 @@
-<h1>THE RANKING</h1>
-<%= link_to 'NEW SUBMISSION', new_submission_path %>
+<style>
+.button {
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+    background-color: #f44336; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-size: 25px;
+}
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+a:link {
+    text-decoration: none;
+    color: black;
+}
+.button:hover {
+    border-radius: 12px;
+    background-color: darkred;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+<div class="logo">
+    <img src="https://webpages.uncc.edu/ddas4/SoftwareEngFinalProject/output-onlinepngtools.png" align="left" width="400px" height="210px"/><h1 style="font-size:64pt;">RANK MY RIDE: RANKING</h1>
+</div>
 <table>
   <tr>
     <th>Title</th>
     <th>Text</th>
+    <th>Preview</th>
+    <th colspan="3">Options</th>
   </tr>
  
   <% @submissions.each do |submission| %>
     <tr>
       <td><%= submission.title %></td>
       <td><%= submission.text %></td>
+      <td><%= image_tag submission.image.url(:thumb) %></td>
       <td><%= link_to 'Show', submission_path(submission) %></td>
       <td><%= link_to 'Edit', edit_submission_path(submission) %></td>
       <td><%= link_to 'Destroy',
@@ -18,5 +67,6 @@
                              data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
-</table>
-<%= link_to 'Back', controller: 'welcome' %>
+</table> 
+<button type="button" class="button"><%= link_to 'Back', controller: 'welcome' %></button>
+<button type="button" class="button"><%= link_to 'NEW SUBMISSION', new_submission_path %></button>

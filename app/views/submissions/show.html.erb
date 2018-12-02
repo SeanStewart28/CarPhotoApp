@@ -1,10 +1,16 @@
+<div class="logo">
+    <img src="https://webpages.uncc.edu/ddas4/SoftwareEngFinalProject/output-onlinepngtools.png" align="left" width="400px" height="210px"/><h1 style="font-size:64pt;">RANK MY RIDE</h1>
+</div>
+
+<%= image_tag @submission.image.url(:large) %>
+
 <p>
     <strong>Title:</strong>
     <%= @submission.title %>
 </p>
 
 <p>
-    <strong>Text:</strong>
+    <strong>Description:</strong>
     <%= @submission.text %>  
 </p>
 

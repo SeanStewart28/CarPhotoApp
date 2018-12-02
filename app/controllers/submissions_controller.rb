@@ -44,5 +44,5 @@ end
 
 private 
     def submission_params
-        params.require(:submission).permit(:title, :text)
+        params.require(:submission).permit(:title, :text, :image)
     end

@@ -1,3 +1,65 @@
-<h1>RANK MY CAR</h1>
-<%= link_to 'THE RANKING', controller: 'submissions' %><br>
-<%= link_to 'UPLOAD', new_submission_path %>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css%22%3E">
+<style>
+.button {
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+    background-color: #f44336; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-size: 100px;
+    padding: 32px 16px;
+}
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+a:link {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+    background-color: #f44336; 
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-size: 100px;
+    padding: 32px 16px;
+    background-color: darkred;
+}
+.img {
+    width: 750px;
+    height: 750px;
+    border: 1px solid black;
+    position: absolute;
+    right: 400px;
+}
+</style>
+<div class="logo">
+    <img src="https://webpages.uncc.edu/ddas4/SoftwareEngFinalProject/output-onlinepngtools.png" align="left" width="400px" height="210px"/><h1 style="font-size:64pt;">RANK MY RIDE</h1>
+</div>
+<div style="text-align:left;">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+    <div style="text-align:center;">
+        <img src="https://webpages.uncc.edu/ddas4/SoftwareEngFinalProject/image0.jpg" class="img" style="float:right;width:500px;height:500px;">
+    </div>
+    
+    <button type="button" class="button" href="#"><%= link_to 'THE RANKING', controller: 'submissions' %></button>
+    <br><br><br><br>
+    <button type="button" class="button" href="#"><%= link_to 'UPLOAD', new_submission_path %></button>
+</div>
