@@ -26,11 +26,11 @@ a:link {
     border-radius: 12px;
     background-color: darkred;
 }
-
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    margin-top: 40px;
 }
 
 td, th {
@@ -42,15 +42,27 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+#search {
+    position: absolute;
+    right: 0;
+    margin: 10px auto;
+}
+input[type="submit"] {
+    position: absolute;
+    right: 0;
+    margin: 10px auto;
+}
 </style>
 <div class="logo">
     <img src="https://webpages.uncc.edu/ddas4/SoftwareEngFinalProject/output-onlinepngtools.png" align="left" width="400px" height="210px"/><h1 style="font-size:64pt;">RANK MY RIDE: RANKING</h1>
 </div>
 
-<%= form_tag submissions_path, :method => 'get' do %>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search" %>
-<% end %>
+<a class="search">
+    <%= form_tag submissions_path, :method => 'get' do %>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search" %>
+    <% end %>
+</a>
 
 <table>
   <tr>
